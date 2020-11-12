@@ -64,7 +64,8 @@ public class SignFragment extends Fragment {
         mButton_signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!mEditText_userName.getText().toString().equals("")&& !mEditText_password.getText().toString().equals("")) {
+                if (!mEditText_userName.getText().toString().equals("")&&
+                        !mEditText_password.getText().toString().equals("")) {
                     if (!mRepository.userExist(mEditText_userName.toString())) {
                         mUser.setUserName(mEditText_userName.getText().toString());
                         mUser.setPassword(mEditText_password.getText().toString());

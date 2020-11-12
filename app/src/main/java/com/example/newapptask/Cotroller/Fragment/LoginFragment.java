@@ -74,7 +74,7 @@ public class LoginFragment extends Fragment {
                     mUser = mRepository.get(mEditText_userName.getText().toString());
                     if (mEditText_password.getText().toString().equals(mUser.getPassword())) {
                         toastMetod("login");
-                        Intent intent = TaskManagerActivity.newIntent(getContext());
+                        Intent intent = TaskManagerActivity.newIntent(getContext(),mUser.getUserId());
                         startActivity(intent);
 
 

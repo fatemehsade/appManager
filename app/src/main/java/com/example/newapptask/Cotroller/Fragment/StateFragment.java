@@ -10,19 +10,22 @@ import android.view.ViewGroup;
 
 import com.example.newapptask.R;
 
+import java.util.UUID;
+
 
 public class StateFragment extends Fragment {
 
 
+    public static final String EXTRA_TAB_NAME = "com.example.newapptask.Cotroller.Fragment.TabName";
 
     public StateFragment() {
         // Required empty public constructor
     }
 
-    public static StateFragment newInstance() {
+    public static StateFragment newInstance(String tabName, UUID userId) {
         StateFragment fragment = new StateFragment();
         Bundle args = new Bundle();
-
+        args.putString(EXTRA_TAB_NAME,tabName);
         fragment.setArguments(args);
         return fragment;
     }
