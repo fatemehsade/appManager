@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_show"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_eye"
+        android:layout_alignParentRight="true"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_title"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/txt_view_image"
+        android:text="Title: "
+        android:layout_margin="8dp"
+        android:textSize="30dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_view_title"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:textSize="30dp"
+        android:text="20:33"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/oval_stroke"
+        android:text="A"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:padding="15dp"
+        android:paddingLeft="20dp"
+        android:paddingStart="27dp"/>
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_view_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_view_title"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@+id/txt_view_image"
+        android:textSize="30dp"
+        android:text="20/11/2020"/>
+
+
+
+
+
+</RelativeLayout>
