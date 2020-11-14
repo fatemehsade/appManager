@@ -1,38 +1,55 @@
 package com.example.newapptask.Model;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+import com.example.newapptask.DataBase.TaskManagerSchema.TASK.taskColumns;
+
+import com.example.newapptask.DataBase.TaskManagerSchema;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
+import static com.example.newapptask.DataBase.TaskManagerSchema.TASK.taskColumns;
+
+@Entity
 public class Task implements Serializable {
+    @PrimaryKey(autoGenerate = true)
+    private Long mId ;
+    @ColumnInfo(name = taskColumns.TIME)
     private String mTitle;
+    @ColumnInfo(name = taskColumns.DESCRIPTION)
     private String mDescription;
+    @ColumnInfo(name = taskColumns.DATE)
     private Date mDate;
+    @ColumnInfo(name = taskColumns.TIME)
     private Date mTime;
+    @ColumnInfo(name = taskColumns.STATE)
     private TaskState mState;
-    private boolean mSolved;
-    private UUID mId;
+    @ColumnInfo(name = taskColumns.ID)
+    private UUID mUUID;
+    @ColumnInfo(name = taskColumns.USERID)
     private UUID mUserId;
 
     public Task() {
-        mId = UUID.randomUUID();
+        mUUID = UUID.randomUUID();
     }
 
     public Task(UUID id) {
-        mId = id;
+        mUUID = id;
         mDate = new Date();
         mTime = new Date();
     }
 
     public Task(String title, String description, Date date, Date time, TaskState state,
-                boolean solved, UUID id, UUID userId) {
+                 UUID id, UUID userId) {
         mTitle = title;
         mDescription = description;
         mDate = date;
         mTime = time;
         mState = state;
-        mSolved = solved;
-        mId = id;
+        mUUID = id;
         mUserId = userId;
     }
 
@@ -76,20 +93,20 @@ public class Task implements Serializable {
         mState = state;
     }
 
-    public boolean isSolved() {
-        return mSolved;
-    }
-
-    public void setSolved(boolean solved) {
-        mSolved = solved;
-    }
-
-    public UUID getId() {
+    public Long getId() {
         return mId;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         mId = id;
+    }
+
+    public UUID getUUID() {
+        return mUUID;
+    }
+
+    public void setUUID(UUID UUID) {
+        mUUID = UUID;
     }
 
     public UUID getUserId() {

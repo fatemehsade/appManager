@@ -9,16 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.newapptask.R.id;
 import com.example.newapptask.Model.Task;
-import com.example.newapptask.R;
 import com.example.newapptask.TimeDateFormat;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
 import java.util.UUID;
-
-import static android.os.Build.VERSION_CODES.R;
 
 public class stateAdaptor extends RecyclerView.Adapter<stateAdaptor.Holder> {
     private List<Task> mTasks;
@@ -89,7 +85,7 @@ public class stateAdaptor extends RecyclerView.Adapter<stateAdaptor.Holder> {
             mBtn_show.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mCallbacks.OnaSelectShowBtn(mTask.getId());
+                    mCallbacks.OnaSelectShowBtn(mTask.getUUID());
 
                 }
             });
