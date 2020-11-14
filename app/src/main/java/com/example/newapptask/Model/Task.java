@@ -31,9 +31,20 @@ public class Task implements Serializable {
     private UUID mUUID;
     @ColumnInfo(name = taskColumns.USERID)
     private UUID mUserId;
+    @ColumnInfo(name = taskColumns.IMG_ADDRESS)
+    private String mImgAddress;
 
     public Task() {
         mUUID = UUID.randomUUID();
+        mImgAddress="";
+    }
+
+    public String getImgAddress() {
+        return mImgAddress;
+    }
+
+    public void setImgAddress(String imgAddress) {
+        mImgAddress = imgAddress;
     }
 
     public Task(UUID id) {

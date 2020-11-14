@@ -113,7 +113,7 @@ public class TaskDBRepository implements IRepository<Task> {
         mDAO.insert(element);
 
     }
-    public void getLIstWithState(String state,UUID userId){
-        mDAO.getListWithState(state,userId);
+    public List<Task> getLIstWithState(String state,UUID userId){
+        return mDAO.getListWithState(state,userId);
     }
 }

@@ -47,6 +47,23 @@
         android:textSize="30dp"
         android:text="20/11/2020"/>
 
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_below="@+id/txt_view_image"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/ic_camera" />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/txt_view_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_share" />
+
 
 
 

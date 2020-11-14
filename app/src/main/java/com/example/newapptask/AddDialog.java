@@ -30,6 +30,7 @@ import java.util.UUID;
 import java.util.zip.Inflater;
 
 public class AddDialog extends DialogFragment {
+    public static final String EXTRA_NEW_TASK = "com.example.newapptask.New Task";
     public static final String EXTRA_TAB_NAME = "TabName";
     public static final String EXTRA_USER_ID = "USER_id";
     private EditText mEditText_title,mEditText_description;
