@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.newapptask.Adaptor.StateAdaptor;
+import com.example.newapptask.Adaptor.FragmentStateAdaptor;
 import com.example.newapptask.Model.User;
 import com.example.newapptask.R;
 import com.google.android.material.tabs.TabLayout;
@@ -32,7 +32,7 @@ public class TaskManagerFragment extends Fragment {
     public static final String DONE_FRAGMENT = "DONE";
     public static final String EXTRA_TAB_NAME = "Tab_name";
     private UUID mUserId;
-    private StateAdaptor mAdaptor;
+    private FragmentStateAdaptor mAdaptor;
 
 
 
@@ -68,7 +68,7 @@ public class TaskManagerFragment extends Fragment {
     }
 
     private void setUpAdaptor() {
-        mAdaptor=new StateAdaptor(getActivity(),mUserId);
+        mAdaptor=new FragmentStateAdaptor(getActivity(),mUserId);
         mViewPager.setAdapter(mAdaptor);
         TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(mTabLayout, mViewPager,
                 (tab, position) -> {

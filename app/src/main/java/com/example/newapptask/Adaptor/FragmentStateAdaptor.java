@@ -9,13 +9,14 @@ import com.example.newapptask.Cotroller.Fragment.StateFragment;
 
 import java.util.UUID;
 
-public class StateAdaptor extends FragmentStateAdapter {
+public class FragmentStateAdaptor extends FragmentStateAdapter {
     private UUID mUserId;
 
-    public StateAdaptor(@NonNull FragmentActivity fragmentActivity, UUID userId)
-    {
+
+    public FragmentStateAdaptor(@NonNull FragmentActivity fragmentActivity,UUID userId) {
         super(fragmentActivity);
         mUserId=userId;
+
     }
 
     @NonNull

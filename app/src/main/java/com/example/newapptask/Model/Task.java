@@ -1,9 +1,10 @@
 package com.example.newapptask.Model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-public class Task {
+public class Task implements Serializable {
     private String mTitle;
     private String mDescription;
     private Date mDate;

@@ -16,12 +16,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textview.MaterialTextView;
 
 import java.util.List;
+import java.util.UUID;
 
 import static android.os.Build.VERSION_CODES.R;
 
 public class stateAdaptor extends RecyclerView.Adapter<stateAdaptor.Holder> {
     private List<Task> mTasks;
     private Context mContext;
+    private onIconSelectListener mCallbacks;
 
     public List<Task> getTasks() {
         return mTasks;
@@ -31,9 +33,10 @@ public class stateAdaptor extends RecyclerView.Adapter<stateAdaptor.Holder> {
         mTasks = tasks;
     }
 
-    public stateAdaptor(List<Task> tasks, Context context) {
+    public stateAdaptor(List<Task> tasks, Context context ,onIconSelectListener iconSelectListener) {
         mTasks = tasks;
         mContext = context;
+        mCallbacks=iconSelectListener;
     }
 
     @NonNull
@@ -86,9 +89,13 @@ public class stateAdaptor extends RecyclerView.Adapter<stateAdaptor.Holder> {
             mBtn_show.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mCallbacks.OnaSelectShowBtn(mTask.getId());
 
                 }
             });
         }
+    }
+    public interface onIconSelectListener{
+        void OnaSelectShowBtn(UUID taskId);
     }
 }
